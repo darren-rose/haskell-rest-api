@@ -24,6 +24,7 @@ dependencies:
 - text
 - filepath
 - containers
+- hspec
 
 library:
   source-dirs: src
