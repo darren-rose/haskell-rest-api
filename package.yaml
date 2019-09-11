@@ -25,6 +25,7 @@ dependencies:
 - filepath
 - containers
 - hspec
+- scotty
 
 library:
   source-dirs: src

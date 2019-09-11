@@ -23,3 +23,9 @@ run
 ```
 stack exec haskell-rest-api-exe
 ```
+
+visit
+
+```
+http://localhost:3000/kirk
+```
