@@ -28,6 +28,8 @@ dependencies:
 - scotty
 - wai-extra
 - aeson
+- mongoDB
+- resource-pool
 
 library:
   source-dirs: src
