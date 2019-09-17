@@ -9,11 +9,15 @@ import Web.Scotty
 import Network.Wai.Middleware.RequestLogger
 import Data.Aeson (FromJSON, ToJSON)
 import GHC.Generics
+import User
+import Customer
 
-data Customer = Customer { name :: String, email :: String, phone :: String } deriving (Show, Generic)
+-- | Moved the datatype in a diferent file called Customer, also added one for the User
+-- Used type text, String is also ok
+-- data Customer = Customer { name :: String, email :: String, phone :: String } deriving (Show, Generic)
 
-instance ToJSON Customer
-instance FromJSON Customer
+-- instance ToJSON Customer
+-- instance FromJSON Customer
 
 kirk :: Customer
 kirk = Customer { name = "kirk", email = "kirk@enterprise.com", phone = "123" }
@@ -25,7 +29,6 @@ allCustomers :: [Customer]
 allCustomers = [kirk, spock]
 
 routes :: ScottyM ()
-
 routes = do
   middleware logStdoutDev
 

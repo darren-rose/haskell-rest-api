@@ -29,7 +29,10 @@ dependencies:
 - wai-extra
 - aeson
 - mongoDB
+- bson
+- bson-generic
 - resource-pool
+- mtl
 
 library:
   source-dirs: src
