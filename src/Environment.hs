@@ -2,7 +2,7 @@ module Environment where
 import Data.Pool
 import Database.MongoDB
 import Control.Monad.Reader
-
+import DB
 
 type DarrensEnvironment = ReaderT Environment IO
 
@@ -16,3 +16,10 @@ getDbPool =  do
 data Environment = Environment {
     dbPool::Pool Pipe
 }
+
+
+-- Forgot to add a method that creates the environment
+createEnvironment :: IO Environment
+createEnvironment = do 
+	pool <- getPool
+    return $ Environment pool
